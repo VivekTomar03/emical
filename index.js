@@ -3,9 +3,10 @@ const { connection } = require("./Config/db")
 const { userRouter } = require("./Routes/userRoutes")
 const { emiRouter } = require("./Routes/emilRouter")
 const cors = require('cors')
-app.use(cors())
+
 
 const app = express()
+app.use(cors())
 app.use(express.json())
  app.use("/user", userRouter)
 
